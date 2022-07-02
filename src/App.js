@@ -1,5 +1,5 @@
 import Expenses from "./components/Expenses";
-import "./Expenses.css"
+import React from 'react'
 
 function App() {
   const expenses = [
@@ -23,11 +23,22 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  // alternative for jsx
   return (
-    <div>
-      <Expenses items={expenses}/>
-    </div>
-  );
+    React.createElement('div', {}),
+    React.createElement(Expenses, {items : expenses})
+
+  )
+
+
+  // jsx
+  // return (
+  //   <div>
+          // <
+  //     <Expenses items={expenses}/>
+  //   </div>
+  // );
 }
 
 export default App;
