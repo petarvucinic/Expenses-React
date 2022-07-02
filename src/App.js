@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import React from 'react'
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -25,20 +26,20 @@ const App = () => {
   ];
 
   // alternative for jsx
-  return (
-    React.createElement('div', {}),
-    React.createElement(Expenses, {items : expenses})
+  // return (
+  //   React.createElement('div', {}),
+  //   React.createElement(Expenses, {items : expenses})
 
-  )
+  // )
 
 
   // jsx
-  // return (
-  //   <div>
-          // <
-  //     <Expenses items={expenses}/>
-  //   </div>
-  // );
+  return (
+    <div>
+      <NewExpense></NewExpense>
+      <Expenses items={expenses}/>
+    </div>
+  );
 }
 
 export default App;
